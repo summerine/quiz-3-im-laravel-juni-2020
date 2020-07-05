@@ -4,7 +4,8 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class ArtikelSeeder extends Seeder
+
+class ArticleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,16 +14,17 @@ class ArtikelSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('artikel')->insert([
+        
+        DB::table('articles')->insert([
             [
-                'judul' => Str::random(10),
-                'isi' => Str::random(30),
+                'title' => Str::random(10),
+                'content' => Str::random(30),
                 'slug' => Str::random(10),
                 'tag' => Str::random(20),
             ],
             [
-                'judul' => Str::random(10),
-                'isi' => Str::random(30),
+                'title' => Str::random(10),
+                'content' => Str::random(30),
                 'slug' => Str::random(10),
                 'tag' => Str::random(20),
             ]

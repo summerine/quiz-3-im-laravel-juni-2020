@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,13 +13,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('erd.erd');
 });
 
-Route::get('/items/create', 'ItemController@create'); // menampilkan halaman form
-Route::post('/items', 'ItemController@store'); // menyimpan data
-Route::get('/items', 'ItemController@index'); // menampilkan semua
-Route::get('/items/{id}', 'ItemController@show'); // menampilkan detail item dengan id 
-Route::get('/items/{id}/edit', 'ItemController@edit'); // menampilkan form untuk edit item
-Route::put('/items/{id}', 'ItemController@update'); // menyimpan perubahan dari form edit
-Route::delete('/items/{id}', 'ItemController@destroy'); // menghapus data dengan id
+Route::get('/articles/create', 'ArticleController@create'); 
+Route::post('/articles', 'ArticleController@store');
+Route::get('/articles', 'ArticleController@index'); 
+Route::get('/articles/{id}', 'ArticleController@show'); 
+Route::get('/articles/{id}/edit', 'ArticleController@edit'); 
+Route::put('/articles/{id}', 'ArticleController@update'); 
+Route::delete('/articles/{id}', 'ArticleController@destroy');
